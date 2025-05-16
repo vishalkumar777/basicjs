@@ -13,3 +13,39 @@ if (true) {
 // console.log(b);
 // console.log(c);
 
+function one(){
+    const username = "hitesh"
+    function two(){
+        const website = "youtube"
+        console.log(username)
+    }
+    // console.log(website)
+    two()
+}
+// one()
+
+if(true){
+    const username = "hitesh"
+    if(username === "hitesh"){
+        const website = "youtube"
+        // console.log(username + website)
+    }
+    // console.log(website); //it will give error for scope
+}
+// console.log(username) //it will give error for scope
+
+
+// +++++++++++++++++++++++ interesting +++++++++++++++++++++++++
+
+// addone(5) // it will work
+function addone(num){
+    return num;
+}
+// addone(5) // it will work
+
+
+// addtwo(5) // it will give error here 
+const addtwo =  function(num){
+    return num + 2
+}
+// addtwo(5) // it will work here
