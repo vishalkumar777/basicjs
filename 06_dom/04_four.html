@@ -11,6 +11,25 @@
     </ul>
 </body>
 <script>
-    
+    //first way to createElement
+    function addLanguage(langname){
+        const li=document.createElement('li');
+        li.innerHTML=`${langname}`
+        document.querySelector('.language').appendChild(li);
+    }
+    addLanguage("c++") // problen is jab jab y function chal rha hai tab tab tree traverse kar rha hai
+    addLanguage("Python") // example abhi ul mai ek li hai but if there are 10000 of li then it traverse 10000 time
+
+    //optimize way
+    function addOptLanguage(langname){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addOptLanguage("java")
+
+    //edit 11:42
+
 </script>
 </html>
