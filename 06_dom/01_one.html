@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color : #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-black">
+        <h1 class="heading">
+            dom learning on chai or code <span style="display: none;">test text</span>
+        </h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+         <p>Lorem ipsum dolor sit amet.</p>
+         <input type="password" value="">
+
+         <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+         </ul>
+    </div>
+</body>
+</html>
+
+
+<script>
+    document.getElementById('title') // it will return give give hole elment
+    document.getElementById('title').id // it will give id value
+    document.getElementById('title').className  // it will give name of class
+    document.getElementById('title').getAttribute('id')  // it will give name of id class any atribute value
+    document.getElementById('title').setAttribute('class','test heading') // it will give or override atribute value
+
+    const title = document.getElementById('title') // it will give hole element
+    title.style.backgroundColor = 'green' // setting collor in elemnet
+    title.style.padding = "15px"
+    title.style.borderRadius = "15px"
+
+    title.textContent // give all the content if the tag is display none in element like span
+    title.innerHTML //  give element text and also span tag hole content with tag
+    title.innerText  // display only text in element
+
+    //********** query selector ****************
+    document.querySelector('h2') // give first h2 whole element
+    document.querySelector('#title')
+    document.querySelector('.heading')
+    document.querySelector('input[type="password"]')
+    document.querySelector('p:first-child')
+
+    const myul = document.querySelector('ul')
+    const turnGreen=myul.querySelector('li')
+    turnGreen.style.backgroundColor="green"
+    turnGreen.innerText // it will give first li value
+    turnGreen.innerText = 'five'
+
+    //************** query selector all **************
+    // nodelist and html colloction is not pure array
+
+    const tempLiList = document.querySelectorAll('li') // now tempLiList is NodeList
+    // tempLiList.style.backgroundColor="blue" // it will throw error becouse of nodelist
+    tempLiList[0].style.backgroundColor="green" // it will work
+    
+    tempLiList.forEach(function (l){  // foreach will work on nodelist
+        l.style.color="blue"
+    })
+
+    // ***************************************
+    const tempClassList=document.getElementsByClassName('list-item')  // return HTMLCOLLECTION , foreach will not work
+    const myConvertedArray=Array.from(tempClassList) // convert in array from anywher
+
+    myConvertedArray.forEach(function (l){
+        li.style.color="orange"
+    });
+
+
+</script>
