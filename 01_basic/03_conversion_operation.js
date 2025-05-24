@@ -64,6 +64,13 @@ let gameCounter = 100
 ++gameCounter;
 console.log(gameCounter);
 
+//post increment give value first after that increase/decrese
+// let val1 = 6
+// let val2 = val1--
+// console.log(val2)
+// console.log(val1)
+//pre increment fist increse then give value
+
 // link to study
 // https://tc39.es/ecma262/multipage/abstract-operations.html#sec-type-conversion
 
