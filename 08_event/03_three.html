@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+   const sayDate = function(str){
+    console.log(`hello  ${str}`, Date.now())
+   }
+   
+   let interval; // global variable
+   document.getElementById('start').addEventListener('click',function(){
+    interval = setInterval(sayDate,1000,"hitesh")
+   })
+
+   document.getElementById('stop').addEventListener('click',function(){
+    clearInterval(interval);
+    console.log("Stoped Invervel")
+    })
+</script>
+</html>
