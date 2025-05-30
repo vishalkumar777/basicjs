@@ -88,7 +88,7 @@ async function getAllUsers() {
 }
 getAllUsers()
 
-//************** fetch useing then catch*********/
+//************** fetch useing then catch *********/
 fetch('https://jsonplaceholder.typicode.com/users').then(function(response){ //we know data will get then we use response 
     // console.log(response)
     return response.json()
@@ -97,3 +97,5 @@ fetch('https://jsonplaceholder.typicode.com/users').then(function(response){ //w
 }).catch(function(error){
     console.log(error)
 })
+
+//https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch
